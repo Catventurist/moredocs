@@ -1,17 +1,17 @@
 export default defineAppConfig({
   shadcnDocs: {
     site: {
-      name: 'shadcn-docs',
-      description: 'Beautifully designed Nuxt Content template built with shadcn-vue. Customizable. Compatible. Open Source.',
+      name: 'moredocs',
+      description: 'Open Source Nuxt Content template built with shadcn-vue.',
       ogImage: '/hero.png',
     },
     theme: {
       customizable: true,
-      color: 'zinc',
+      color: 'natural',
       radius: 0.5,
     },
     header: {
-      title: 'shadcn-docs',
+      title: 'moredocs',
       showTitle: true,
       logo: {
         light: '/logo.svg',
@@ -23,7 +23,7 @@ export default defineAppConfig({
         links: [{
           title: 'Getting Started',
           to: '/getting-started',
-          description: 'Start building your document with shadcn-docs-nuxt',
+          description: 'Start building your documentation',
         }, {
           title: 'API',
           to: '/api',
@@ -60,7 +60,7 @@ export default defineAppConfig({
       }],
       links: [{
         icon: 'lucide:github',
-        to: 'https://github.com/ZTL-UwU/shadcn-docs-nuxt',
+        to: 'https://github.com/Catventurist/moredocs',
         target: '_blank',
       }],
     },
@@ -126,7 +126,7 @@ export default defineAppConfig({
         },
         {
           icon: 'lucide:github',
-          to: 'https://github.com/ZTL-UwU/shadcn-docs-nuxt',
+          to: 'https://github.com/Catventurist/moredocs',
           target: '_blank',
         },
       ],
@@ -137,12 +137,12 @@ export default defineAppConfig({
       links: [{
         title: 'Star on GitHub',
         icon: 'lucide:star',
-        to: 'https://github.com/ZTL-UwU/shadcn-docs-nuxt',
+        to: 'https://github.com/Catventurist/moredocs',
         target: '_blank',
       }, {
         title: 'Create Issues',
         icon: 'lucide:circle-dot',
-        to: 'https://github.com/ZTL-UwU/shadcn-docs-nuxt/issues',
+        to: 'https://github.com/Catventurist/moredocs/issues',
         target: '_blank',
       }],
     },

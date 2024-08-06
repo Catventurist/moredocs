@@ -58,6 +58,6 @@ export default defineNuxtConfig({
         baseUrl: '.',
       },
     },
-    typecheck: true,
+    typeCheck: true,
   },
 });

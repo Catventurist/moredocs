@@ -1,15 +1,15 @@
 {
-  "name": "shadcn-docs-nuxt",
+  "name": "moredocs",
   "type": "module",
-  "version": "0.4.6",
-  "author": "Tony Zhang <zhangtianli2006@gmail.com>",
+  "version": "0.5.1",
+  "author": "Cat",
   "license": "MIT",
   "homepage": "https://shadcn-docs.nuxt.dev/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ZTL-UwU/shadcn-docs-nuxt.git"
+    "url": "git+https://github.com/Catventurist/moredocs.git"
   },
-  "bugs": "https://github.com/ZTL-UwU/shadcn-docs-nuxt/issues",
+  "bugs": "https://github.com/Catventurist/moredocs/issues",
   "main": "./nuxt.config.ts",
   "files": [
     "app",

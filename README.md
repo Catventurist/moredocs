@@ -1,6 +1,18 @@
-![Hero](https://github.com/user-attachments/assets/555cfd9b-3461-40ff-b4fa-6df7f2ba44f5)
+# moredocs
+Documentation exploration based on a great Nuxt Template
+[Github](https://github.com/Catventurist/moredocs)
 
-# shadcn-docs-nuxt
+## Improvements
+*nuxt.config.ts*
+- telemetry: false,
+- typeCheck: true,
+Replaced icons 
+  - noto > lucide 
+  - logos > vscode-icons
+Removed iframe from *index.md*
+Personalized *app.config.ts*
+
+## Original Template: shadcn-docs-nuxt
 
 [![built with nuxt][nuxt-src]][nuxt-href]
 [![npm version][npm-version-src]][npm-version-href]

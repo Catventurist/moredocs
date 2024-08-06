@@ -1,9 +1,11 @@
-import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const currentDir = dirname(fileURLToPath(import.meta.url));
 
 export default defineNuxtConfig({
+  telemetry: false,
+  compatibilityDate: '2024-07-05',
   devtools: { enabled: true },
   modules: [
     '@nuxtjs/tailwindcss',
@@ -56,6 +58,6 @@ export default defineNuxtConfig({
         baseUrl: '.',
       },
     },
+    typecheck: true,
   },
-  compatibilityDate: '2024-07-05',
 });

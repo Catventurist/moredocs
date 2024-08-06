@@ -1,6 +1,6 @@
 # moredocs
-Documentation exploration based on a great Nuxt Template
-[Github](https://github.com/Catventurist/moredocs)
+Documentation exploration
+-[Github](https://github.com/Catventurist/moredocs)
 
 ## Improvements
 *nuxt.config.ts*
@@ -9,8 +9,8 @@ Documentation exploration based on a great Nuxt Template
 Replaced icons 
   - noto > lucide 
   - logos > vscode-icons
-Removed iframe from *index.md*
-Personalized *app.config.ts*
+- Removed iframe from *index.md*
+- Personalized *app.config.ts*
 
 ## Original Template: shadcn-docs-nuxt
 

@@ -20,10 +20,12 @@ interface DefaultConfig {
     showTitleInMobile: boolean;
     darkModeToggle: boolean;
     nav: ({
+      icon: string;
       title: string;
       to: string;
       target: string;
       links: ({
+        icon: string;
         title: string;
         to: string;
         target: string;
@@ -32,6 +34,7 @@ interface DefaultConfig {
     })[];
     links: ({
       icon: string;
+      title: string;
       to: string;
       target: string;
     })[];

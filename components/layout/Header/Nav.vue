@@ -3,18 +3,17 @@
     <UiNavigationMenuList>
       <UiNavigationMenuItem v-for="(item, i) in nav" :key="i">
         <template v-if="item.links">
-          <UiNavigationMenuTrigger class="font-semibold bg-transparent">
+          <UiNavigationMenuTrigger class="font-semibold bg-transparent gap-2">
+            <Icon v-if="item.icon" :name="item.icon" />
             {{ item.title }}
           </UiNavigationMenuTrigger>
           <UiNavigationMenuContent>
             <ul class="w-[250px] p-2">
               <li v-for="link in item.links" :key="link.title">
-                <NuxtLink
-                  :to="link.to"
-                  :target="link.target"
-                  class="px-3 py-2 mb-1 hover:bg-muted rounded-md w-full block gap-2 transition-all"
-                >
-                  <div class="font-semibold">
+                <NuxtLink :to="link.to" :target="link.target"
+                  class="px-3 py-2 mb-1 hover:bg-muted rounded-md w-full block transition-all">
+                  <div class="font-semibold gap-2">
+                    <Icon v-if="link.icon" :name="link.icon" />
                     {{ link.title }}
                   </div>
                   <div class="text-muted-foreground text-sm">
@@ -27,7 +26,8 @@
         </template>
         <NuxtLink v-else :to="item.to" :target="item.target">
           <Icon name="lucide:arrow-up-right" class="absolute right-2 top-2 text-muted-foreground" size="13" />
-          <div class="pr-6 font-semibold bg-transparent" :class="navigationMenuTriggerStyle()">
+          <div class="pr-6 font-semibold bg-transparent gap-2" :class="navigationMenuTriggerStyle()">
+            <Icon v-if="item?.icon" :name="item.icon" />
             {{ item.title }}
           </div>
         </NuxtLink>

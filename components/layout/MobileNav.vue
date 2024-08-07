@@ -1,16 +1,18 @@
 <template>
   <UiSheet v-model:open="open">
     <UiSheetTrigger as-child>
-      <UiButton
-        variant="ghost"
-        size="icon"
-        class="md:hidden"
-      >
+      <UiButton variant="ghost" size="icon" class="md:hidden">
         <Icon name="lucide:menu" size="18" />
       </UiButton>
     </UiSheetTrigger>
     <UiSheetContent side="left" class="pr-0">
-      <LayoutHeaderLogo />
+      <UiSheetHeader>
+        <UiSheetTitle>
+          <LayoutHeaderLogo />
+        </UiSheetTitle>
+        <UiSheetDescription>
+        </UiSheetDescription>
+      </UiSheetHeader>
       <LayoutAside is-mobile />
     </UiSheetContent>
   </UiSheet>

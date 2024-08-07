@@ -7,7 +7,7 @@ export default defineAppConfig({
     },
     theme: {
       customizable: true,
-      color: 'natural',
+      color: 'neutral',
       radius: 0.5,
     },
     header: {
@@ -19,42 +19,51 @@ export default defineAppConfig({
       },
       darkModeToggle: true,
       nav: [{
+        icon: 'lucide:book',
         title: 'Docs',
         links: [{
+          icon: 'lucide:info',
           title: 'Getting Started',
           to: '/getting-started',
           description: 'Start building your documentation',
         }, {
+          icon: 'lucide:code',
           title: 'API',
           to: '/api',
           description: 'Discover the configurations and exposed APIs.',
           target: '_self',
         }],
       }, {
+        icon: 'lucide:cat',
         title: 'Credits',
         links: [{
+          icon: 'vscode-icons:file-type-js',
           title: 'shadcn-ui',
           to: 'https://ui.shadcn.com/',
           description: 'For the beautiful component design & docs design',
           target: '_blank',
         }, {
+          icon: 'vscode-icons:file-type-vue',
           title: 'shadcn-vue',
           to: 'https://www.shadcn-vue.com/',
           description: 'For the vue port of shadcn-ui & some docs component source',
           target: '_blank',
         }, {
+          icon: 'vscode-icons:file-type-nuxt',
           title: 'Docus',
           to: 'https://docus.dev/',
           description: 'For inspiration & some docs component source',
           target: '_blank',
         }, {
+          icon: 'vscode-icons:file-type-nuxt',
           title: 'Nuxt Content',
           to: 'https://content.nuxt.com/',
           description: 'Content made easy for Vue Developers',
           target: '_blank',
         }],
       }, {
-        title: 'Use This Template',
+        icon: 'lucide:copy',
+        title: 'Get',
         to: '/getting-started/installation',
         target: '_self',
       }],
@@ -120,12 +129,14 @@ export default defineAppConfig({
       credits: 'Copyright © 2024',
       links: [
         {
+          icon: 'vscode-icons:file-type-vue',
           title: 'shadcn-vue',
           to: 'https://www.shadcn-vue.com/',
           target: '_blank',
         },
         {
           icon: 'lucide:github',
+          title: 'Github',
           to: 'https://github.com/Catventurist/moredocs',
           target: '_blank',
         },

@@ -21,6 +21,3 @@ jobs:
         with:
           bun-version: latest
 
-      - run: bunx changelogithub
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

@@ -12,9 +12,13 @@
               <li v-for="link in item.links" :key="link.title">
                 <NuxtLink :to="link.to" :target="link.target"
                   class="px-3 py-2 mb-1 hover:bg-muted rounded-md w-full block transition-all">
-                  <div class="font-semibold gap-2">
-                    <Icon v-if="link.icon" :name="link.icon" />
+                  <div class="font-semibold gap-2 flex justify-between">
                     {{ link.title }}
+                    <Icon v-if="link.target === '_blank'" name="lucide:external-link" class="text-muted-foreground "
+                      size="13" />
+                    <Icon v-if="link.icon" :name="link.icon" />
+
+
                   </div>
                   <div class="text-muted-foreground text-sm">
                     {{ link.description }}
@@ -25,7 +29,6 @@
           </UiNavigationMenuContent>
         </template>
         <NuxtLink v-else :to="item.to" :target="item.target">
-          <Icon name="lucide:arrow-up-right" class="absolute right-2 top-2 text-muted-foreground" size="13" />
           <div class="pr-6 font-semibold bg-transparent gap-2" :class="navigationMenuTriggerStyle()">
             <Icon v-if="item?.icon" :name="item.icon" />
             {{ item.title }}

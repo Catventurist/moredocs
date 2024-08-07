@@ -150,11 +150,6 @@ export default defineAppConfig({
         icon: 'lucide:star',
         to: 'https://github.com/Catventurist/moredocs',
         target: '_blank',
-      }, {
-        title: 'Create Issues',
-        icon: 'lucide:circle-dot',
-        to: 'https://github.com/Catventurist/moredocs/issues',
-        target: '_blank',
       }],
     },
     search: {

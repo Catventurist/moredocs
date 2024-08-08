@@ -13,6 +13,7 @@ Replaced icons
 - Personalized *app.config.ts*
 
 ## Original Template: shadcn-docs-nuxt
+[shadcn-docs-nuxt](https://github.com/ZTL-UwU/shadcn-docs-nuxt)
 
 [![built with nuxt][nuxt-src]][nuxt-href]
 [![npm version][npm-version-src]][npm-version-href]

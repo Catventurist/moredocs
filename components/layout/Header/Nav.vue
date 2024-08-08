@@ -1,7 +1,7 @@
 <template>
   <UiNavigationMenu>
     <UiNavigationMenuList>
-      <UiNavigationMenuItem v-for="(item, i) in nav" :key="i">
+      <UiNavigationMenuItem v-for="(item, i) in nav" :key="i" class="relative">
         <template v-if="item.links">
           <UiNavigationMenuTrigger class="font-semibold bg-transparent gap-2">
             <Icon v-if="item.icon" :name="item.icon" />

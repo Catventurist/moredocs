@@ -59,5 +59,16 @@ export default defineNuxtConfig({
       },
     },
     typeCheck: true,
+    strict: true,
   },
+  app: {
+    pageTransition: {
+      name: 'page',
+      mode: 'out-in' // default
+    },
+    layoutTransition: {
+      name: 'rotate',
+      mode: 'out-in' // default
+    }
+  }
 });

@@ -123,6 +123,9 @@ export default defineAppConfig({
         'yml': 'vscode-icons:file-type-yaml',
         'json': 'vscode-icons:file-type-json',
         'terminal': 'lucide:terminal',
+        'github': 'lucide:github',
+        'linkedin': 'lucide:linkedin',
+        'x': 'lucide:x'
       },
     },
     footer: {

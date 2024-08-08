@@ -43,6 +43,7 @@
     "@nuxtjs/tailwindcss": "^6.12.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "embla-carousel-vue": "^8.1.8",
     "nuxt": "^3.12.4",
     "radix-vue": "^1.9.3",
     "shadcn-nuxt": "^0.10.4",
@@ -58,6 +59,7 @@
     "@vueuse/core": "^10.11.0",
     "@vueuse/nuxt": "^10.11.0",
     "eslint": "9.2.0",
+    "lucide-vue-next": "^0.424.0",
     "shiki": "^1.12.1",
     "vue-tsc": "^2.0.29"
   }

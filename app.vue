@@ -1,7 +1,9 @@
 <template>
   <NuxtLoadingIndicator :color="false" class="z-100 bg-primary/80" />
   <ConfigProvider :use-id="useIdFunction">
+
     <NuxtPage />
+
     <Toaster />
   </ConfigProvider>
 </template>

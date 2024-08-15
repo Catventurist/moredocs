@@ -1,6 +1,6 @@
 <template>
   <Alert :to="to" :target="target" icon="lucide:bookmark">
-    Read more in <span class="capitalize font-semibold">{{ computedTitle }}</span>
+    Read more in <span class="font-semibold">{{ computedTitle }}</span>
   </Alert>
 </template>
 
@@ -11,17 +11,15 @@ const props = defineProps<{
   target?: string;
 }>();
 
-function createBreadcrumb(link: string = 'here') {
-  if (link.startsWith('http'))
-    return link.replace(/^https?:\/\//, '');
-
-  return link
-    .split('/')
-    .filter(Boolean)
-    .join(' > ')
-    .replace('Api', 'API');
-}
-
-// Guess title from link!
-const computedTitle = computed<string>(() => props.title || createBreadcrumb(props.to));
+const computedTitle = computed<string>(
+  () => {
+    if (props.title)
+      return props.title;
+    try {
+      return useBreadcrumb(props.to).map(x => x.title).join(' > ');
+    } catch {
+      return props.to;
+    }
+  },
+);
 </script>

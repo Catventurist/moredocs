@@ -1,7 +1,7 @@
 ---
 title: Home
 navigation: false
-layout: page
+layout: default
 ---
 
 ::hero
@@ -21,7 +21,7 @@ actions:
     leftIcon: 'lucide:github'
 ---
 #title
-Effortless and Beautiful<br>Docs Template.
+Effortless and Beautiful :br Docs Template.
 #description
-Beautifully designed Nuxt Content template built with shadcn-vue.<br>Customizable. Compatible. Open Source.
+Beautifully designed Nuxt Content template built with shadcn-vue. :br Customizable. Compatible. Open Source.
 ::

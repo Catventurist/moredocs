@@ -1,19 +1,11 @@
 <template>
-  <div class="w-full">
-    <NuxtLayout>
+  <div>
+    <NuxtLayout name="default">
       <LandingBenefits />
       <LandingFeatures />
       <LandingPricing />
-      <LandingTeam />
       <LandingTestimonials />
+      <LandingFaq />
     </NuxtLayout>
   </div>
 </template>
-
-
-<script setup lang="ts">
-
-definePageMeta({
-  layout: 'page'
-});
-</script>

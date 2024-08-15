@@ -10,6 +10,7 @@ interface TeamProps {
 interface SocialNetworkProps {
   name: string;
   url: string;
+  icon?: string;
 }
 
 const teamList: TeamProps[] = [
@@ -22,14 +23,17 @@ const teamList: TeamProps[] = [
       {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/leopoldo-miranda/",
+        icon: "lucide:linkedin"
       },
       {
         name: "Github",
         url: "https://github.com/leoMirandaa",
+        icon: "lucide:github"
       },
       {
         name: "X",
         url: "https://x.com/leo_mirand4",
+        icon: "lucide:x"
       },
     ],
   },
@@ -152,6 +156,27 @@ const teamList: TeamProps[] = [
       },
     ],
   },
+  {
+    imageUrl:
+      "/Cateouti.png",
+    firstName: "John",
+    lastName: "Wayne",
+    positions: ["Cloud Native Developer", " Kubernetes Orchestrator"],
+    socialNetworks: [
+      {
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/in/leopoldo-miranda/",
+      },
+      {
+        name: "Github",
+        url: "https://github.com/leoMirandaa",
+      },
+      {
+        name: "X",
+        url: "https://x.com/leo_mirand4",
+      },
+    ],
+  },
 ];
 
 </script>
@@ -160,10 +185,10 @@ const teamList: TeamProps[] = [
   <div class="container lg:w-[75%] py-24 sm:py-32">
     <div class="text-center mb-8 group/head">
       <h2 class="text-lg text-primary text-center mb-2 tracking-wider duration-300 group-hover/head:text-foreground">
-        Team
+        Interesting
       </h2>
       <h2 class="text-3xl md:text-4xl text-center font-bold duration-300 group-hover/head:text-primary">
-        Folks
+        People
       </h2>
     </div>
 
@@ -196,9 +221,8 @@ const teamList: TeamProps[] = [
         </UiCardContent>
 
         <UiCardFooter class="space-x-4 mt-auto">
-          <NuxtLink v-for="{ name, url } in socialNetworks" key="name" :href="url" target="_blank"
+          <NuxtLink v-for="{ name, url, icon } in socialNetworks" key="name" :to="url" target="_blank"
             class="hover:scale-110 transition-all duration-300 group-hover/card:text-primary">
-            {{ name }}
           </NuxtLink>
         </UiCardFooter>
       </UiCard>

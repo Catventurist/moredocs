@@ -9,9 +9,7 @@
 <script setup lang="ts">
 const { page } = useContent();
 const config = useConfig();
-definePageMeta({
-  layout: 'default'
-});
+
 useSeoMeta({
   title: `${page.value?.title ?? '404'} - ${config.value.site.name}`,
   ogTitle: page.value?.title,

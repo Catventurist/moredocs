@@ -2,11 +2,11 @@
   <div class="[&:not(:first-child)]:mt-4 [&:not(:first-child)]:pt-4">
     <div class="mb-2">
       <div class="flex space-x-2">
-        <span class="font-bold text-md text-primary">
+        <span class="text-md font-bold text-primary">
           {{ name }}
         </span>
         <span v-if="required" class="self-center font-mono text-sm text-muted-foreground">
-          required
+          {{ fieldRequiredText }}
         </span>
         <span class="flex-1" />
         <span class="self-center font-mono text-sm text-muted-foreground">
@@ -34,4 +34,6 @@ defineProps<{
   description?: string;
   defaultValue?: string;
 }>();
+
+const { fieldRequiredText } = useConfig().value.main;
 </script>

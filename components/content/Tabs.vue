@@ -1,70 +1,41 @@
 <template>
-  <UiTabs
-    v-if="variant === 'separate'"
-    class="[&:not(:first-child)]:mt-5"
-    :default-value="label(($slots.default?.() ?? [])[0]?.props)"
-  >
+  <UiTabs v-if="variant === 'separate'" class="[&:not(:first-child)]:mt-5"
+    :default-value="label(($slots.default?.() ?? [])[0]?.props)">
     <UiTabsList>
-      <UiTabsTrigger
-        v-for="(slot, i) in $slots.default?.() ?? []"
-        :key="`${i}${label(slot.props)}`"
-        :value="label(slot.props)"
-      >
-        <Icon
-          v-if="icon(slot?.props)"
-          :name="icon(slot?.props)!"
-          class="self-center mr-1.5"
-        />
+      <UiTabsTrigger v-for="(slot, i) in $slots.default?.() ?? []" :key="`${i}${label(slot.props)}`"
+        :value="label(slot.props)">
+        <Icon v-if="icon(slot?.props)" :name="icon(slot?.props)!" class="mr-1.5 self-center" />
         {{ label(slot.props) }}
       </UiTabsTrigger>
     </UiTabsList>
 
-    <UiTabsContent
-      v-for="(slot, i) in $slots.default?.() ?? []"
-      :key="`${i}${label(slot.props)}`"
-      :value="label(slot.props)"
-    >
+    <UiTabsContent v-for="(slot, i) in $slots.default?.() ?? []" :key="`${i}${label(slot.props)}`"
+      :value="label(slot.props)">
       <component :is="slot" />
     </UiTabsContent>
   </UiTabs>
 
   <UiCard v-else-if="variant === 'card'" class="[&:not(:first-child)]:mt-5">
     <UiScrollArea>
-      <div class="border-b p-0.5 flex text-sm relative overflow-x-auto">
+      <div class="relative flex overflow-x-auto border-b p-0.5 text-sm">
         <div class="flex p-1">
-          <div
-            v-for="(slot, i) in ($slots.default?.() ?? [])"
-            :key="`${i}${label(slot.props)}`"
+          <div v-for="(slot, i) in ($slots.default?.() ?? [])" :key="`${i}${label(slot.props)}`"
             :value="label(slot.props)"
-            class="flex px-3 py-1.5 rounded-md text-muted-foreground transition-all duration-75 cursor-pointer"
-            :class="[activeTabIndex === i && 'bg-muted text-primary']"
-            @mousedown.left="activeTabIndex = i"
-          >
-            <Icon
-              v-if="icon(slot?.props)"
-              :name="icon(slot?.props)!"
-              class="self-center mr-1.5"
-            />
+            class="flex cursor-pointer rounded-md px-3 py-1.5 text-muted-foreground transition-all duration-75"
+            :class="[activeTabIndex === i && 'bg-muted text-primary']" @mousedown.left="activeTabIndex = i">
+            <Icon v-if="icon(slot?.props)" :name="icon(slot?.props)!" class="mr-1.5 self-center" />
             {{ label(slot.props) }}
           </div>
         </div>
-        <CodeCopy
-          v-if="$slots.default?.()[activeTabIndex]?.props?.code"
-          class="self-center ml-auto mr-3 pl-2"
-          :code="$slots.default?.()[activeTabIndex]?.props?.code"
-        />
+        <CodeCopy v-if="$slots.default?.()[activeTabIndex]?.props?.code" class="ml-auto mr-3 self-center pl-2"
+          :code="$slots.default?.()[activeTabIndex]?.props?.code" />
       </div>
       <ScrollBar orientation="horizontal" />
     </UiScrollArea>
 
-    <div
-      v-for="(slot, i) in $slots.default?.() ?? []"
-      v-show="activeTabIndex === i"
-      :key="`${i}${label(slot.props)}`"
-      :value="label(slot.props)"
-      class="mt-0"
-      :class="[padded && ($slots.default?.()[activeTabIndex]?.type as any).tag !== 'pre' && 'p-3']"
-    >
+    <div v-for="(slot, i) in $slots.default?.() ?? []" v-show="activeTabIndex === i" :key="`${i}${label(slot.props)}`"
+      :value="label(slot.props)" class="mt-0"
+      :class="[padded && ($slots.default?.()[activeTabIndex]?.type as any).tag !== 'pre' && 'p-3']">
       <component :is="slot" :in-group="true" />
     </div>
   </UiCard>

@@ -6,7 +6,7 @@ const currentDir = dirname(fileURLToPath(import.meta.url));
 export default defineNuxtConfig({
   telemetry: false,
   compatibilityDate: '2024-07-05',
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   modules: [
     '@nuxtjs/tailwindcss',
     'shadcn-nuxt',
@@ -70,5 +70,9 @@ export default defineNuxtConfig({
       name: 'rotate',
       mode: 'out-in' // default
     }
-  }
+  },
+  sourcemap: {
+    server: false,
+    client: false
+  },
 });

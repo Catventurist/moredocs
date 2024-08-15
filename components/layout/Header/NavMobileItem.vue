@@ -1,8 +1,8 @@
 <template>
   <template v-if="item.links">
     <UiCollapsible v-model:open="isOpen">
-      <UiCollapsibleTrigger class="w-full text-left p-2">
-        <div class="w-full flex gap-2">
+      <UiCollapsibleTrigger class="w-full p-2 text-left">
+        <div class="flex w-full gap-1">
           <Icon v-if="item?.icon" :name="item.icon" class="mt-1" />
           {{ item.title }}
           <Icon :name="isOpen ? 'lucide:chevrons-down-up' : 'lucide:chevrons-up-down'" size="12"
@@ -13,14 +13,14 @@
         <ul class="pl-2">
           <li v-for="link in item.links" :key="link.title">
             <NuxtLink :to="link.to" :target="link.target"
-              class="px-3 py-2 mb-1 hover:bg-muted rounded-md w-full block gap-2 transition-all">
+              class="mb-1 block w-full gap-2 rounded-md px-3 py-2 transition-all hover:bg-muted">
               <div class="font-semibold gap-2 flex justify-between">
                 {{ link.title }}
                 <Icon v-if="link.target === '_blank'" name="lucide:external-link" class="text-muted-foreground "
                   size="13" />
                 <Icon v-if="link.icon" :name="link.icon" />
               </div>
-              <div class="text-muted-foreground text-sm">
+              <div class="text-sm text-muted-foreground">
                 {{ link.description }}
               </div>
             </NuxtLink>
@@ -29,7 +29,7 @@
       </UiCollapsibleContent>
     </UiCollapsible>
   </template>
-  <NuxtLink v-else :to="item.to" :target="item.target" class="w-full flex p-2">
+  <NuxtLink v-else :to="item.to" :target="item.target" class="flex w-full p-2">
     <div class="font-semibold gap-2">
       <Icon v-if="item?.icon" :name="item.icon" />
       {{ item.title }}

@@ -5,7 +5,9 @@ export default {
   darkMode: 'class',
   safelist: ['dark'],
   prefix: '',
-  content: [],
+  content: [
+    './content/**/*',
+  ],
   theme: {
     container: {
       center: true,
@@ -73,7 +75,7 @@ export default {
           from: { height: 'var(--radix-collapsible-content-height)' },
           to: { height: '0' },
         },
-        wave: {
+        'wave': {
           '0%': { transform: 'rotate(0.0deg)' },
           '10%': { transform: 'rotate(14deg)' },
           '20%': { transform: 'rotate(-8deg)' },
@@ -83,6 +85,10 @@ export default {
           '60%': { transform: 'rotate(0.0deg)' },
           '100%': { transform: 'rotate(0.0deg)' },
         },
+        'wiggle': {
+          '0%, 100%': { transform: 'rotate(-9deg)' },
+          '50%': { transform: 'rotate(9deg)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -90,6 +96,8 @@ export default {
         'collapsible-down': 'collapsible-down 0.2s ease-in-out',
         'collapsible-up': 'collapsible-up 0.2s ease-in-out',
         'waving-hand': 'wave 2s linear infinite',
+        'spin-slow': 'spin 1s linear infinite',
+        'wiggle': 'wiggle 1s ease-in-out infinite',
       },
     },
   },

@@ -84,7 +84,7 @@ const reviewList: ReviewProps[] = [
                 <Icon name="lucide:star" class="size-4 fill-primary text-primary" />
                 <Icon name="lucide:star" class="size-4 fill-primary text-primary" />
               </div>
-              <span class="duration-300 group-hover/card:translate-x-4">
+              <span class="text-muted-foreground duration-300 group-hover/card:text-foreground">
                 "{{ review.comment }}"
               </span>
             </UiCardContent>

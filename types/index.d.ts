@@ -10,6 +10,7 @@ interface DefaultConfig {
     radius: number;
   };
   header: {
+    showLoadingIndicator: boolean;
     title: string;
     showTitle: boolean;
     border: boolean;
@@ -47,6 +48,8 @@ interface DefaultConfig {
     breadCrumb: boolean;
     showTitle: boolean;
     codeCopyToast: boolean;
+    codeCopyToastText: string;
+    fieldRequiredText: string;
     codeIcon: {
       [key: string]: string;
     };
@@ -76,6 +79,32 @@ interface DefaultConfig {
     enable: boolean;
     inAside: boolean;
     style: 'input' | 'button';
+    placeholder: string;
+    placeholderDetailed: string;
+  };
+  insta: {
+    links: ({
+      icon: string;
+      title: string;
+      to: string;
+      target: string;
+    })[];
+  };
+  dash: {
+    links: ({
+      icon: string;
+      title: string;
+      to: string;
+      target: string;
+    })[];
+    promo: ({
+      icon: string;
+      title: string;
+      description: string;
+      content: string;
+      to: string;
+      target: string;
+    })[];
   };
 }
 

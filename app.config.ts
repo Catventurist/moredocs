@@ -7,7 +7,7 @@ export default defineAppConfig({
     },
     theme: {
       customizable: true,
-      color: 'neutral',
+      color: 'violet',
       radius: 0.5,
     },
     header: {
@@ -158,6 +158,85 @@ export default defineAppConfig({
     search: {
       enable: true,
       inAside: false,
+    },
+    insta: {
+      links: [{
+        icon: 'lucide:home',
+        title: 'Home',
+        to: '/',
+        target: '_self',
+      }, {
+        icon: 'lucide:compass',
+        title: 'Explore',
+        to: '/',
+        target: '_self',
+      }, {
+        icon: 'lucide:video',
+        title: 'Video',
+        to: '/',
+        target: '_self',
+      }, {
+        icon: 'lucide:message-circle',
+        title: 'Messages',
+        to: '/',
+        target: '_self',
+      }, {
+        icon: 'lucide:bell',
+        title: 'Notifications',
+        to: '/',
+        target: '_self',
+      }, {
+        icon: 'lucide:circle-plus',
+        title: 'Create',
+        to: '/',
+        target: '_self',
+      }, {
+        icon: 'lucide:settings',
+        title: 'Settings',
+        to: '/',
+        target: '_self',
+      }]
+    },
+    dash: {
+      links: [{
+        icon: 'lucide:home',
+        title: 'Home',
+        to: '/',
+        target: '_self',
+      }, {
+        icon: 'lucide:shopping-bag',
+        title: 'Orders',
+        to: '/',
+        target: '_self',
+      }, {
+        icon: 'lucide:package',
+        title: 'Products',
+        to: '/',
+        target: '_self',
+      }, {
+        icon: 'lucide:users',
+        title: 'Customers',
+        to: '/',
+        target: '_self',
+      }, {
+        icon: 'lucide:line-chart',
+        title: 'Analytics',
+        to: '/',
+        target: '_self',
+      }, {
+        icon: 'lucide:settings',
+        title: 'Settings',
+        to: '/',
+        target: '_self',
+      }],
+      promo: [{
+        icon: 'lucide:heart',
+        title: 'Freedom',
+        description: 'Is the best',
+        content: 'Try it out',
+        to: '/',
+        target: '_self',
+      }],
     },
   },
 });

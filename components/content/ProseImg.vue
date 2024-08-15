@@ -1,16 +1,11 @@
 <template>
-  <NuxtImg
-    :src="refinedSrc"
-    :alt="alt"
-    :width="width"
-    :height="height"
-    class="[&:not(:first-child)]:mt-8 [&:not(:last-child)]:mb-8"
-  />
+  <NuxtImg :src="refinedSrc" :alt="alt" :width="width" :height="height"
+    class="rounded-md [&:not(:first-child)]:mt-8 [&:not(:last-child)]:mb-8" />
 </template>
 
 <script setup lang="ts">
-import { joinURL, withLeadingSlash, withTrailingSlash } from 'ufo';
 import { computed, useRuntimeConfig } from '#imports';
+import { joinURL, withLeadingSlash, withTrailingSlash } from 'ufo';
 
 const props = defineProps({
   src: {

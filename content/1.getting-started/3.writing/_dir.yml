@@ -1,3 +1,4 @@
 title: Writing
 icon: lucide:edit
 navigation.redirect: /getting-started/writing/markdown
+layout: doc

@@ -1,9 +1,5 @@
 <template>
-  <NuxtLink
-    :href="href"
-    :target="target"
-    class="underline-offset-4 underline font-semibold"
-  >
+  <NuxtLink :href="href" :target="target" class="font-semibold underline underline-offset-4">
     <slot />
   </NuxtLink>
 </template>

@@ -2,7 +2,7 @@ import { defu } from 'defu';
 
 const defaultConfig: DefaultConfig = {
   site: {
-    name: 'shadcn-docs',
+    name: 'moredocs',
     description: 'Beautifully designed Nuxt Content template built with shadcn-vue. Customizable. Compatible. Open Source.',
     ogImage: '/hero.png',
   },
@@ -12,7 +12,8 @@ const defaultConfig: DefaultConfig = {
     radius: 0.5,
   },
   header: {
-    title: 'shadcn-docs',
+    showLoadingIndicator: true,
+    title: 'moredocs',
     showTitle: true,
     logo: {
       light: '/logo.svg',
@@ -32,6 +33,8 @@ const defaultConfig: DefaultConfig = {
     breadCrumb: true,
     showTitle: true,
     codeCopyToast: true,
+    codeCopyToastText: 'Copied to clipboard!',
+    fieldRequiredText: 'required',
     padded: true,
     codeIcon: {
       'package.json': 'vscode-icons:file-type-node',
@@ -91,6 +94,15 @@ const defaultConfig: DefaultConfig = {
     enable: true,
     inAside: false,
     style: 'input',
+    placeholder: 'Search...',
+    placeholderDetailed: 'Search documentation...',
+  },
+  insta: {
+    links: [],
+  },
+  dash: {
+    links: [],
+    promo: [],
   },
 };
 
@@ -109,9 +121,12 @@ export function useConfig() {
       const aside = processedConfig.aside;
       const footer = processedConfig.footer;
       const toc = processedConfig.toc;
-
+      const search = processedConfig.search;
+      const insta = processedConfig.insta;
+      const dash = processedConfig.dash;
       return {
         ...appConfig.value,
+
         ...processedConfig,
         header: {
           ...header,
@@ -138,6 +153,21 @@ export function useConfig() {
           ...navKeyFromPath(route.path, 'footer', navigation.value || []),
           ...page.value?.footer,
         } as typeof footer,
+        search: {
+          ...search,
+          ...navKeyFromPath(route.path, 'search', navigation.value || []),
+          ...page.value?.search,
+        } as typeof search,
+        insta: {
+          ...insta,
+          ...navKeyFromPath(route.path, 'insta', navigation.value || []),
+          ...page.value?.insta,
+        } as typeof insta,
+        dash: {
+          ...dash,
+          ...navKeyFromPath(route.path, 'dash', navigation.value || []),
+          ...page.value?.dash,
+        } as typeof dash,
       };
     },
   );

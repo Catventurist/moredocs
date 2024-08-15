@@ -1,23 +1,19 @@
 <template>
-  <UiCard
-    class="[&:not(:first-child)]:mt-5 [&:not(:last-child)]:mb-5 relative overflow-hidden"
-    :class="[inGroup && 'rounded-t-none border-none mb-0']"
-  >
-    <div v-if="!inGroup && filename" class="p-3 border-b flex text-sm font-mono">
-      <Icon v-if="icon" :name="icon" class="self-center mr-1.5" />
+  <UiCard class="relative overflow-hidden [&:not(:first-child)]:mt-5 [&:not(:last-child)]:mb-5"
+    :class="[inGroup && 'mb-0 rounded-t-none border-none']">
+    <div v-if="!inGroup && filename" class="flex border-b p-3 font-mono text-sm">
+      <Icon v-if="icon" :name="icon" class="mr-1.5 self-center" />
       {{ filename }}
       <CodeCopy :code="code" class="ml-auto mr-1" />
     </div>
 
-    <span v-if="!filename" class="absolute top-3 right-3">
+    <span v-if="!filename" class="absolute right-3 top-3 z-10">
       <CodeCopy :code="code" />
     </span>
-    <div class="pr-9 bg-muted/30">
+    <div class="bg-muted/30">
       <UiScrollArea>
-        <div
-          class="py-3 text-sm overflow-x-auto"
-          :class="[`highlight-${language}`, !filename && 'inline-copy', !language && 'pl-3']"
-        >
+        <div class="overflow-x-auto py-3 text-sm"
+          :class="[!filename && 'inline-copy', !language && 'pl-3', !inGroup && 'in-group']">
           <slot />
         </div>
         <ScrollBar orientation="horizontal" />
@@ -74,5 +70,9 @@ const icon = iconMap.get(props.filename?.toLowerCase()) || iconMap.get(props.lan
 .shiki .line {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+}
+
+.in-group .line {
+  padding-right: 3rem;
 }
 </style>

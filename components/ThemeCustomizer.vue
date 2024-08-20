@@ -10,18 +10,17 @@
     </div>
     <div class="space-y-1.5">
       <UiLabel>Color</UiLabel>
-      <div class="grid grid-cols-3 gap-2">
-        <template v-for="color in allColors" :key="color">
-          <UiButton class="justify-start gap-2" variant="outline" :class="{ 'border-2 border-primary': theme === color }"
-            @click="setTheme(color)">
-            <span class="flex size-5 items-center justify-center rounded-full"
-              :style="{ backgroundColor: backgroundColor(color) }">
-              <Icon v-if="theme === color" name="lucide:check" size="16" class="text-white" />
-            </span>
-            <span class="text-xs capitalize">{{ color }}</span>
-          </UiButton>
-        </template>
-      </div>
+      <UiSeparator />
+      <template v-for="color in allColors" :key="color" class="grid grid-cols-3 gap-2">
+        <UiButton class="justify-start gap-2" variant="outline" :class="{ 'border-2 border-primary': theme === color }"
+          @click="setTheme(color)">
+          <div class="flex size-5 items-center justify-center rounded-full"
+            :style="{ backgroundColor: backgroundColor(color) }">
+            <Icon v-if="theme === color" name="lucide:check" size="16" />
+          </div>
+          <p class="text-xs capitalize">{{ color }}</p>
+        </UiButton>
+      </template>
     </div>
     <div class="space-y-1.5">
       <UiLabel>Radius</UiLabel>
@@ -29,7 +28,7 @@
         <template v-for="r in RADII" :key="r">
           <UiButton class="justify-center gap-2" variant="outline" :class="{ 'border-2 border-primary': radius === r }"
             @click="setRadius(r)">
-            <span class="text-xs capitalize">{{ r }}</span>
+            <p class="text-xs capitalize">{{ r }}</p>
           </UiButton>
         </template>
       </div>
@@ -41,18 +40,18 @@
           :class="{ 'border-2 border-primary': colorMode.preference === 'light' }"
           @click="colorMode.preference = 'light'">
           <Icon name="lucide:sun" size="16" />
-          <span class="text-xs capitalize">Light</span>
+          <p class="text-xs capitalize">Light</p>
         </UiButton>
         <UiButton class="justify-center gap-2" variant="outline"
           :class="{ 'border-2 border-primary': colorMode.preference === 'dark' }" @click="colorMode.preference = 'dark'">
           <Icon name="lucide:moon" size="16" />
-          <span class="text-xs capitalize">Dark</span>
+          <p class="text-xs capitalize">Dark</p>
         </UiButton>
         <UiButton class="justify-center gap-2" variant="outline"
           :class="{ 'border-2 border-primary': colorMode.preference === 'system' }"
           @click="colorMode.preference = 'system'">
           <Icon name="lucide:monitor" size="16" />
-          <span class="text-xs capitalize">System</span>
+          <p class="text-xs capitalize">System</p>
         </UiButton>
       </div>
     </div>

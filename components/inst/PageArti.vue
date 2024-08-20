@@ -35,7 +35,7 @@
     </div>
     <div class="flex flex-row justify-between py-3 space-x-3">
       <p class="text-primary text-sm">Comment</p>
-      <UiButton>
+      <UiButton variant="ghost">
         More
       </UiButton>
     </div>

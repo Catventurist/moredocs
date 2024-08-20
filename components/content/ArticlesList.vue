@@ -1,0 +1,31 @@
+<script setup lang="ts">
+import { withTrailingSlash } from 'ufo';
+
+const props = defineProps({
+  path: {
+    type: String,
+    default: 'articles'
+  }
+})
+
+const { data: _articles } = await useAsyncData('articles', async () => await queryContent(withTrailingSlash(props.path)).sort({ date: -1 }).find())
+
+const articles = computed(() => _articles.value || [])
+</script>
+
+<template>
+  <div v-if="articles?.length" class="sm:px-12 md:px-0 p-4">
+    <div class="my-12 md:my-8 text-center">
+      <ArticlesListItem :article="articles[0]" :featured="true" />
+    </div>
+    <div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
+      <ArticlesListItem v-for="(article, index) in articles.slice(1)" :key="index" :article="article" />
+    </div>
+  </div>
+  <div v-else class="min-h[30vh] flex flex-col align-items-center justify-content-center">
+    <p>Seems like there are no articles yet.</p>
+    <p>
+      You can start by creating more
+    </p>
+  </div>
+</template>

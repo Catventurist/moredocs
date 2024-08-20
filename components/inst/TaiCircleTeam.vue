@@ -1,6 +1,5 @@
 <template>
     <div class="container size-48 grid place-content-center">
-
         <div style="--total: 12;" class="relative rounded-full grid size-64 [grid-template-areas:'stack'] place-content-center
         [&>label]:[grid-area:stack]
         [&>label]:size-20
@@ -69,7 +68,6 @@
                     </text>
                 </svg>
             </label>
-
         </div>
 
         <!-- SVG template with dynamic text -->

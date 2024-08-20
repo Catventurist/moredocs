@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Autoplay from 'embla-carousel-autoplay';
 interface ReviewProps {
   image: string;
   name: string;
@@ -61,7 +62,7 @@ const reviewList: ReviewProps[] = [
 </script>
 
 <template>
-  <div class="py-24 sm:py-32">
+  <div class="container py-24 sm:py-32">
     <div class="text-center mb-8 group/head">
       <h2 class="text-lg text-primary text-center mb-2 tracking-wider duration-300 group-hover/head:text-foreground">
         Testimonials
@@ -72,7 +73,9 @@ const reviewList: ReviewProps[] = [
     </div>
     <UiCarousel :opts="{
       align: 'start',
-    }" class="relative w-[80%] sm:w-[90%] lg:max-w-screen-xl mx-auto">
+    }" :plugins="[Autoplay({
+  delay: 2000,
+})]" class="relative w-[80%] sm:w-[90%] lg:max-w-screen-xl mx-auto">
       <UiCarouselContent>
         <UiCarouselItem v-for="review in reviewList" :key="review.name" class="md:basis-1/2 lg:basis-1/3">
           <UiCard class="bg-muted/50 dark:bg-card group/card">
@@ -84,31 +87,24 @@ const reviewList: ReviewProps[] = [
                 <Icon name="lucide:star" class="size-4 fill-primary text-primary" />
                 <Icon name="lucide:star" class="size-4 fill-primary text-primary" />
               </div>
-              <span class="text-muted-foreground duration-300 group-hover/card:text-foreground">
+              <p v-if="review?.comment" class="text-muted-foreground duration-300 group-hover/card:text-foreground">
                 "{{ review.comment }}"
-              </span>
+              </p>
             </UiCardContent>
 
-            <UiCardHeader>
-              <div class="flex flex-row items-center gap-4">
-                <UiAvatar>
-                  <UiAvatarImage src="/Cateouti.png" alt="cat" class="duration-300 group-hover/card:scale-110" />
-                  <UiAvatarFallback>Cat</UiAvatarFallback>
-                </UiAvatar>
-
-                <div class="flex flex-col">
-                  <UiCardTitle>
-                    <span class="text-lg text-foreground-muted duration-300 group-hover/card:text-primary">
-                      {{ review.name }}
-                    </span>
-                  </UiCardTitle>
-                  <UiCardDescription>
-                    <span class="text-foreground/40 duration-300 group-hover/card:text-foreground">
-                      {{ review.userName }}
-                    </span>
-                  </UiCardDescription>
-                </div>
-              </div>
+            <UiCardHeader class="flex flex-row items-center gap-4">
+              <UiAvatar>
+                <UiAvatarImage src="/Cateouti.png" alt="cat" class="duration-300 group-hover/card:scale-110" />
+                <UiAvatarFallback>Cat</UiAvatarFallback>
+              </UiAvatar>
+              <UiCardTitle v-if="review?.name"
+                class="flex flex-col text-lg text-foreground-muted duration-300 group-hover/card:text-primary">
+                {{ review.name }}
+              </UiCardTitle>
+              <UiCardDescription v-if="review?.userName"
+                class="text-foreground/40 duration-300 group-hover/card:text-foreground">
+                {{ review.userName }}
+              </UiCardDescription>
             </UiCardHeader>
           </UiCard>
         </UiCarouselItem>

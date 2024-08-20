@@ -39,35 +39,30 @@ const FAQList: FAQProps[] = [
 </script>
 
 <template>
-  <div class="container lg:w-[75%] py-24 sm:py-32">
+  <div class="container py-24 sm:py-32">
     <div class="text-center mb-8 group/head">
       <h2 class="text-lg text-primary text-center mb-2 tracking-wider duration-300 group-hover/head:text-foreground">
         FAQS
       </h2>
-      <h2
+      <h3
         class="text-3xl md:text-4xl text-center text-muted-foreground font-bold duration-300 group-hover/head:text-primary">
         Common Questions
-      </h2>
+      </h3>
     </div>
     <UiAccordion type="single" collapsible class="UiAccordionRoot group/acc">
       <UiAccordionItem v-for="{ question, answer, value } in FAQList" :key="value" :value="value">
-        <UiAccordionTrigger>
-          <h2 class="text-left">
-            {{ question }}
-          </h2>
+        <UiAccordionTrigger v-if="question" class="text-left">
+          {{ question }}
         </UiAccordionTrigger>
-        <UiAccordionContent>
-          <p class="text-left text-primary duration-300 hover:text-foreground">
-            {{ answer }}
-          </p>
+        <UiAccordionContent v-if="answer" class="text-left text-primary duration-300 hover:text-foreground">
+          {{ answer }}
         </UiAccordionContent>
       </UiAccordionItem>
     </UiAccordion>
-
     <div class="font-medium mt-8 gap-4 text-center">
       Still have questions?
       <NuxtLink to="/">
-        <UiButton>
+        <UiButton variant="outline">
           Contact us
         </UiButton>
       </NuxtLink>

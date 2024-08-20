@@ -1,18 +1,18 @@
 <template>
-  <UiAlert class="transition-all [&:not(:first-child)]:mt-5"
+  <UiAlert class="transition-all [&:not(:first-child)]:mt-5 group"
     :class="[typeTwClass[type], to && 'cursor-pointer hover:bg-muted/50']" @click="alertClick">
-    <Icon v-if="icon && title" :name="icon" size="16" />
-    <UiAlertTitle v-if="title" class="font-semibold">
+    <Icon v-if="icon && title" :name="icon" size="16" class="duration-300 group-hover:scale-110" />
+    <UiAlertTitle v-if="title" class="font-semibold duration-300 group-hover:text-primary">
       {{ title }}
     </UiAlertTitle>
-    <UiAlertDescription>
-      <div class="flex flex-row space-x-2">
-        <Icon v-if="icon && !title" :name="icon" size="16" class="mb-[2px] min-w-5 self-center" />
-        <span :class="[to && 'pr-3']">
-          <slot />
-        </span>
+    <UiAlertDescription class="flex flex-row space-x-2">
+      <Icon v-if="icon && !title" :name="icon" size="16"
+        class="mb-[2px] min-w-5 self-center duration-300 group-hover:scale-110" />
+      <div :class="[to && 'pr-3']">
+        <slot />
       </div>
-      <Icon v-if="to" name="lucide:arrow-up-right" class="absolute right-4 top-4" />
+      <Icon v-if="to" name="lucide:arrow-up-right"
+        class="absolute right-4 top-4 duration-300 group-hover:-translate-y-2 group-hover:translate-x-2" />
     </UiAlertDescription>
   </UiAlert>
 </template>

@@ -11,17 +11,19 @@ Replaced icons
   - logos > vscode-icons
 - Removed iframe from *index.md*
 - Personalized *app.config.ts*
+- Added some layouts
+- More animations
 
-## Original Template: shadcn-docs-nuxt
-[shadcn-docs-nuxt](https://github.com/ZTL-UwU/shadcn-docs-nuxt)
+[moredocs](https://github.com/catventurist/moredocs)
 
 [![built with nuxt][nuxt-src]][nuxt-href]
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
 
-Beautifully designed _Nuxt Content_ template built with _shadcn-vue_. **Customizable. Compatible. Open Source.**
-
+## Original Template: shadcn-docs-nuxt
+Beautifully designed _Nuxt Content_ Template built with _shadcn-vue_. **Customizable. Compatible. Open Source.**
+- Original [template](https://github.com/ZTL-UwU/shadcn-docs-nuxt)
 - [Documentation / Demo](https://shadcn-docs.nuxt.dev/)
 
 ## Quick Start
@@ -62,11 +64,5 @@ Beautifully designed _Nuxt Content_ template built with _shadcn-vue_. **Customiz
 
 MIT
 
-[npm-version-src]: https://img.shields.io/npm/v/shadcn-docs-nuxt?style=flat&colorA=18181b&colorB=18181b
-[npm-version-href]: https://npmjs.com/package/shadcn-docs-nuxt
-[npm-downloads-src]: https://img.shields.io/npm/dm/shadcn-docs-nuxt?style=flat&colorA=18181b&colorB=18181b
-[npm-downloads-href]: https://npmjs.com/package/shadcn-docs-nuxt
-[license-src]: https://img.shields.io/github/license/ZTL-UwU/shadcn-docs-nuxt.svg?style=flat&colorA=18181b&colorB=18181b
-[license-href]: https://github.com/ZTL-UwU/shadcn-docs-nuxt/blob/main/LICENSE
 [nuxt-src]: https://img.shields.io/badge/Built%20With%20Nuxt-18181B?logo=nuxt.js
 [nuxt-href]: https://nuxt.com/

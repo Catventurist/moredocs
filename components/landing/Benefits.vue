@@ -34,7 +34,7 @@ const benefitList: BenefitsProps[] = [
 </script>
 
 <template>
-  <div class="grid lg:grid-cols-2 place-items-center lg:gap-24">
+  <div class="container grid lg:grid-cols-2 place-items-center lg:gap-24">
     <div class="group/head">
       <h2 class="text-lg text-primary mb-2 duration-300 delay-75 group-hover/head:text-foreground">
         Benefits
@@ -51,23 +51,19 @@ const benefitList: BenefitsProps[] = [
         class="bg-muted/50 dark:bg-card hover:bg-background dark:hover:bg-background transition-all delay-75 group/number">
         <UiCardHeader>
           <div class="flex justify-between">
-            <Icon :name="icon"
+            <Icon v-if="icon" :name="icon"
               class="size-8 mb-6 text-primary duration-300 delay-75 group-hover/number:text-foreground" />
-            <span
+            <h2
               class="text-5xl text-muted-foreground/15 font-medium transition-all delay-75 group-hover/number:text-muted-foreground/30">
               0{{ index + 1 }}
-            </span>
-          </div>
-          <UiCardTitle>
-            <h2 class="text-foreground/80 duration-300 delay-75 group-hover/number:text-primary">
-              {{ title }}
             </h2>
+          </div>
+          <UiCardTitle v-if="title" class="text-foreground/80 duration-300 delay-75 group-hover/number:text-primary">
+            {{ title }}
           </UiCardTitle>
         </UiCardHeader>
-        <UiCardContent>
-          <p class="text-muted-foreground">
-            {{ description }}
-          </p>
+        <UiCardContent v-if="description" class="text-muted-foreground">
+          {{ description }}
         </UiCardContent>
       </UiCard>
     </div>

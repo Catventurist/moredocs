@@ -1,19 +1,22 @@
 <template>
   <div class="flex flex-row items-center gap-2 mt-2">
     <UiButton @click="setPageLayout('default')">
-      Default
+      <Icon name="lucide:circle-dashed" />
     </UiButton>
     <UiButton variant="ghost" @click="setPageLayout('doc')">
-      Documents
+      <Icon name="lucide:file-code" />
     </UiButton>
     <UiButton variant="outline" @click="setPageLayout('dash')">
-      Dash
+      <Icon name="lucide:layout-dashboard" />
     </UiButton>
     <UiButton variant="secondary" @click="setPageLayout('ig')">
-      Some
+      <Icon name="lucide:users-round" />
+    </UiButton>
+    <UiButton variant="ghost" @click="setPageLayout('article')">
+      <Icon name="lucide:file-heart" />
     </UiButton>
     <UiButton variant="default" @click="setPageLayout(false)">
-      Remove layout
+      <Icon name="lucide:delete" />
     </UiButton>
   </div>
 </template>

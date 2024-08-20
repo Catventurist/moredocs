@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :href="href" :target="target" class="font-semibold underline underline-offset-4">
+  <NuxtLink v-if="href" :href="href" :target="target" class="font-semibold underline underline-offset-4">
     <slot />
   </NuxtLink>
 </template>

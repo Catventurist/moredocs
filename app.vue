@@ -3,7 +3,7 @@
   <ConfigProvider :use-id="useIdFunction">
 
     <NuxtPage />
-
+    <CommsLayButton />
     <Toaster />
   </ConfigProvider>
 </template>

@@ -56,24 +56,19 @@ const featureList: FeaturesProps[] = [
     <p class="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
       And things
     </p>
-
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 ">
       <div v-for="{ icon, title, description } in featureList" :key="title">
         <UiCard class="h-full bg-background border-0 shadow-none group/card">
           <UiCardHeader class="flex justify-center items-center">
             <div class="bg-primary/20 p-2 rounded-full ring-8 ring-primary/10 mb-4">
-              <Icon :name="icon" class="size-6 text-primary duration-300 group-hover/card:text-foreground" />
+              <Icon v-if="icon" :name="icon" class="size-6 text-primary duration-300 group-hover/card:text-foreground" />
             </div>
-            <UiCardTitle>
-              <h2 class="duration-300 group-hover/card:text-primary">
-                {{ title }}
-              </h2>
-            </UiCardTitle>
+            <h2 v-if="title" class="duration-300 group-hover/card:text-primary">
+              {{ title }}
+            </h2>
           </UiCardHeader>
-          <UiCardContent>
-            <p class="text-muted-foreground text-center">
-              {{ description }}
-            </p>
+          <UiCardContent v-if="description" class="text-muted-foreground text-center">
+            {{ description }}
           </UiCardContent>
         </UiCard>
       </div>

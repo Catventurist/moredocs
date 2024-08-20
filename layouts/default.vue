@@ -1,5 +1,5 @@
 <template>
-  <div class="layout-default items-center">
+  <div class="items-center p-4">
     <LayoutHeader />
     <slot />
     <LayoutFooter />

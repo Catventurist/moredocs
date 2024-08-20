@@ -1,16 +1,12 @@
 <template>
-  <NuxtLink :to="to" :target="target" class="mx-0.5">
-    <UiBadge :variant="variant" :class="typeTwClass[type]">
-      <ContentSlot unwrap="p" />
-    </UiBadge>
-  </NuxtLink>
+  <UiBadge :variant="variant" :class="typeTwClass[type]">
+    <ContentSlot unwrap="p" />
+  </UiBadge>
 </template>
 
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
   type?: 'default' | 'info' | 'warning' | 'success' | 'danger';
-  to?: string;
-  target?: string;
   variant?: 'default' | 'secondary' | 'destructive' | 'outline';
 }>(), {
   type: 'default',

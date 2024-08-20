@@ -197,8 +197,7 @@ const teamList: TeamProps[] = [
         imageUrl,
         firstName,
         lastName,
-        positions,
-        socialNetworks,
+        positions
       } in teamList" :key="imageUrl"
         class="bg-muted/60 dark:bg-card flex flex-col h-full overflow-hidden group/hoverimg group/card">
         <UiCardHeader class="p-0 gap-0">
@@ -217,13 +216,9 @@ const teamList: TeamProps[] = [
           'pb-4': index === positions.length - 1,
         }">
           {{ position }}
-          <span v-if="index < positions.length - 1">,</span>
+          <p v-if="index < positions.length - 1">,</p>
         </UiCardContent>
-
         <UiCardFooter class="space-x-4 mt-auto">
-          <NuxtLink v-for="{ name, url, icon } in socialNetworks" key="name" :to="url" target="_blank"
-            class="hover:scale-110 transition-all duration-300 group-hover/card:text-primary">
-          </NuxtLink>
         </UiCardFooter>
       </UiCard>
     </div>

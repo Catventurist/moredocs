@@ -3,10 +3,9 @@
     <UiDropdownMenuTrigger as-child>
       <UiButton variant="secondary" size="icon" class="rounded-full">
         <Icon name="lucide:circle-user" class="size-5" />
-        <span class="sr-only">Toggle user menu</span>
       </UiButton>
     </UiDropdownMenuTrigger>
-    <UiDropdownMenuContent align="end">
+    <UiDropdownMenuContent>
       <UiDropdownMenuLabel class="flex gap-2 group">
         <Icon name="lucide:user" class="group-hover:scale-110" />
         <p class="text-muted-foreground group-hover:text-foreground">

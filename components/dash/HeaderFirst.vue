@@ -4,7 +4,7 @@
     <LayoutHeaderLogo class="hidden flex-1 md:flex" />
     <LayoutMobileNav />
     <LayoutHeaderLogo v-if="config.header.showTitleInMobile" class="flex md:hidden" />
-    <UiButton variant="outline" to="/" size="icon" class="ml-auto size-8">
+    <UiButton variant="outline" class="ml-auto size-8">
       <Icon name="lucide:bell" class="size-4" />
     </UiButton>
   </div>

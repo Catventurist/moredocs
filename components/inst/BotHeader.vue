@@ -1,6 +1,6 @@
 <template>
   <div class="items-center justify-between gap-2 md:flex-row">
-    <span class="flex gap-2 justify-evenly rounded-xl hover:bg-primary/20">
+    <div class="flex gap-2 justify-evenly rounded-xl hover:bg-primary/20">
       <div class="mt-2">
         <UiAvatar>
           <UiAvatarImage src="https://randomuser.me/api/portraits/men/1.jpg" alt="cat" />
@@ -14,7 +14,7 @@
       <UiButton variant="outline" class="mt-2">
         Change
       </UiButton>
-    </span>
+    </div>
     <div>
       <div class="py-3">
         <div class="flex flex-row justify-between">
@@ -124,7 +124,7 @@
 
       </div>
       <div>
-        <p class="text-sm pt-1 text-center">&copf; 2024 Cat</p>
+        <p class="text-sm pt-1 text-center">2024 Cat</p>
       </div>
     </div>
   </div>

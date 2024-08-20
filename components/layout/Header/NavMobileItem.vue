@@ -1,26 +1,24 @@
 <template>
-  <template v-if="item.links">
+  <template v-if="item?.links">
     <UiCollapsible v-model:open="isOpen">
-      <UiCollapsibleTrigger class="w-full p-2 text-left">
-        <div class="flex w-full gap-1">
-          <Icon v-if="item?.icon" :name="item.icon" class="mt-1" />
-          {{ item.title }}
-          <Icon :name="isOpen ? 'lucide:chevrons-down-up' : 'lucide:chevrons-up-down'" size="12"
-            class="ml-auto self-center" />
-        </div>
+      <UiCollapsibleTrigger class="flex w-full gap-2 p-2 text-left">
+        <Icon v-if="item?.icon" :name="item.icon" class="mt-1" />
+        {{ item.title }}
+        <Icon :name="isOpen ? 'lucide:chevrons-down-up' : 'lucide:chevrons-up-down'" size="12"
+          class="ml-auto self-center" />
       </UiCollapsibleTrigger>
       <UiCollapsibleContent>
         <ul class="pl-2">
           <li v-for="link in item.links" :key="link.title">
-            <NuxtLink :to="link.to" :target="link.target"
+            <NuxtLink v-if="link?.to" :to="link.to" :target="link.target"
               class="mb-1 block w-full gap-2 rounded-md px-3 py-2 transition-all hover:bg-muted">
-              <div class="font-semibold gap-2 flex justify-between">
+              <div v-if="link?.title" class="font-semibold gap-2 flex justify-between">
                 {{ link.title }}
-                <Icon v-if="link.target === '_blank'" name="lucide:external-link" class="text-muted-foreground "
+                <Icon v-if="link?.target === '_blank'" name="lucide:external-link" class="text-muted-foreground "
                   size="13" />
-                <Icon v-if="link.icon" :name="link.icon" />
+                <Icon v-if="link?.icon" :name="link.icon" />
               </div>
-              <div class="text-sm text-muted-foreground">
+              <div v-if="link?.description" class="text-sm text-muted-foreground">
                 {{ link.description }}
               </div>
             </NuxtLink>
@@ -30,7 +28,7 @@
     </UiCollapsible>
   </template>
   <NuxtLink v-else :to="item.to" :target="item.target" class="flex w-full p-2">
-    <div class="font-semibold gap-2">
+    <div v-if="item?.title" class="font-semibold gap-2">
       <Icon v-if="item?.icon" :name="item.icon" />
       {{ item.title }}
     </div>

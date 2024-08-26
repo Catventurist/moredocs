@@ -63,11 +63,11 @@ export default defineNuxtConfig({
   },
   app: {
     pageTransition: {
-      name: 'page',
+      name: 'rotate',
       mode: 'out-in' // default
     },
     layoutTransition: {
-      name: 'rotate',
+      name: 'page',
       mode: 'out-in' // default
     }
   },

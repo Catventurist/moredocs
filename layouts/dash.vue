@@ -11,7 +11,7 @@
     </div>
     <div class="pt-6">
       <slot />
-      <DashBotCard />
+      <DashFooter />
     </div>
   </div>
 </template>

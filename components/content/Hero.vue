@@ -1,5 +1,5 @@
 <template>
-  <section class="mx-auto flex max-w-[980px] flex-col items-center gap-2 py-8 md:py-12 md:pb-8 lg:py-24 lg:pb-20">
+  <section class="mx-auto flex max-w-[840px] flex-col items-center gap-2 py-8 md:py-12 md:pb-8 lg:py-24 lg:pb-20">
     <NuxtLink v-if="announcement?.to" :to="announcement.to" :target="announcement.target"
       class="inline-flex items-center rounded-lg bg-muted px-3 py-1 text-sm font-medium">
       <Icon v-if="announcement?.icon" :name="announcement.icon" size="16" />

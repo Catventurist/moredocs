@@ -1,5 +1,5 @@
 <template>
-  <div class="grid sm:grid-cols-1 md:grid-cols-4 gap-2">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-2">
     <div class="col-start-1 p-4">
       <LayoutHeaderLogo />
       <InstSomeHeader class="mt-4" />

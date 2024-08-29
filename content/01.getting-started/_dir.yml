@@ -1,0 +1,4 @@
+title: Getting started
+icon: lucide:info
+navigation.redirect: /getting-started/introduction
+layout: doc

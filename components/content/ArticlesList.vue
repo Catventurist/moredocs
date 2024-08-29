@@ -8,7 +8,7 @@ const props = defineProps({
   }
 })
 
-const { data: _articles } = await useAsyncData('articles', async () => await queryContent(withTrailingSlash(props.path)).sort({ date: -1 }).find())
+const { data: _articles } = await useAsyncData('articles', async () => await queryContent(withTrailingSlash(props.path)).limit(4).sort({ date: -1 }).find())
 
 const articles = computed(() => _articles.value || [])
 </script>

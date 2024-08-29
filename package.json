@@ -9,7 +9,6 @@
     "type": "git",
     "url": "git+https://github.com/Catventurist/moredocs.git"
   },
-  "bugs": "https://github.com/Catventurist/moredocs/issues",
   "main": "./nuxt.config.ts",
   "files": [
     "app",
@@ -35,10 +34,10 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@iconify-json/lucide": "^1.1.208",
+    "@iconify-json/lucide": "^1.1.209",
     "@nuxt/content": "^2.13.2",
-    "@nuxt/icon": "^1.4.10",
-    "@nuxt/image": "^1.7.0",
+    "@nuxt/icon": "^1.5.0",
+    "@nuxt/image": "^1.7.1",
     "@nuxtjs/color-mode": "^3.4.4",
     "@nuxtjs/tailwindcss": "^6.12.1",
     "@vee-validate/zod": "^4.13.2",
@@ -58,13 +57,15 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.27.1",
+    "@antfu/eslint-config": "^2.27.3",
     "@iconify-json/vscode-icons": "^1.1.37",
+    "@nuxt/kit": "^3.13.0",
+    "@octokit/rest": "^21.0.2",
     "@vueuse/core": "^10.11.1",
     "@vueuse/nuxt": "^10.11.1",
     "eslint": "9.2.0",
     "lucide-vue-next": "^0.424.0",
     "shiki": "^1.14.1",
-    "vue-tsc": "^2.0.29"
+    "vue-tsc": "^2.1.0"
   }
 }

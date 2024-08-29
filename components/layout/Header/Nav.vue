@@ -8,7 +8,7 @@
             {{ item.title }}
           </UiNavigationMenuTrigger>
           <UiNavigationMenuContent>
-            <ul class="w-[250px] p-2">
+            <ul class="md:w-[420px] p-2 gap-2 grid md:grid-cols-2">
               <li v-for="link in item.links" :key="link.title">
                 <NuxtLink v-if="link?.to" :to="link.to" :target="link.target"
                   class="mb-1 block w-full gap-2 rounded-md px-3 py-2 transition-all hover:bg-muted">

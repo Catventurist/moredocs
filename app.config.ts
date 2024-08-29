@@ -3,7 +3,7 @@ export default defineAppConfig({
     site: {
       name: 'moredocs',
       description: 'Open Source Nuxt Content template built with shadcn-vue.',
-      ogImage: '/hero.png',
+      ogImage: '/Cateouti.png',
     },
     theme: {
       customizable: true,
@@ -24,29 +24,41 @@ export default defineAppConfig({
         links: [{
           icon: 'lucide:info',
           title: 'Getting Started',
-          to: '/getting-started',
+          to: '/getting-started/introduction',
           description: 'Start building your documentation',
         }, {
           icon: 'lucide:code',
           title: 'API',
-          to: '/api',
+          to: '/api/configuration',
           description: 'Discover the configurations and exposed APIs.',
+          target: '_self',
+        }, {
+          icon: 'lucide:book-open',
+          title: 'Articles',
+          to: '/articles/recent-articles',
+          description: 'Discover the content',
+          target: '_self',
+        }, {
+          icon: 'lucide:plane-landing',
+          title: 'Landing',
+          to: '/landing',
+          description: 'Page with info',
           target: '_self',
         }],
       }, {
-        icon: 'lucide:cat',
+        icon: 'lucide:link',
         title: 'Credits',
         links: [{
-          icon: 'vscode-icons:file-type-js',
-          title: 'shadcn-ui',
-          to: 'https://ui.shadcn.com/',
-          description: 'For the beautiful component design & docs design',
+          icon: 'vscode-icons:file-type-nuxt',
+          title: 'shadcn-docs',
+          to: 'https://github.com/ZTL-UwU/shadcn-docs-nuxt',
+          description: 'The original beautiful component design',
           target: '_blank',
         }, {
           icon: 'vscode-icons:file-type-vue',
           title: 'shadcn-vue',
           to: 'https://www.shadcn-vue.com/',
-          description: 'For the vue port of shadcn-ui & some docs component source',
+          description: 'Vue port of shadcn-ui',
           target: '_blank',
         }, {
           icon: 'vscode-icons:file-type-nuxt',
@@ -125,11 +137,17 @@ export default defineAppConfig({
         'terminal': 'lucide:terminal',
         'github': 'lucide:github',
         'linkedin': 'lucide:linkedin',
-        'x': 'lucide:x'
+        'x': 'lucide:x',
+        'cat': 'lucide:cat',
+        'heart': 'lucide:heart',
+        'check': 'lucide:check',
+        'code': 'lucide:code',
+        'right': 'lucide:chevron-right',
+        'left': 'lucide:chevron-left'
       },
     },
     footer: {
-      credits: 'Copyright © 2024',
+      credits: 'Copyright © 2024 Cat',
       links: [
         {
           icon: 'vscode-icons:file-type-vue',
@@ -147,7 +165,7 @@ export default defineAppConfig({
     },
     toc: {
       enable: true,
-      title: 'On This Page',
+      title: 'TOC',
       links: [{
         title: 'Star on GitHub',
         icon: 'lucide:star',

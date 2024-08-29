@@ -13,7 +13,8 @@
           <LayoutSearchButton v-if="!config.search.inAside && config.search.style === 'button'" />
           <ThemePopover v-if="config.theme.customizable" />
           <DarkModeToggle v-if="config.header.darkModeToggle" />
-          <NuxtLink v-for="(link, i) in config.header.links" :key="i" :to="link?.to" :target="link?.target">
+          <NuxtLink v-for="(link, i) in config.header.links" :key="i" :to="link?.to" :target="link?.target"
+            aria-label="social">
             <UiButton variant="ghost" size="icon" class="flex gap-2">
               <Icon v-if="link?.icon" :name="link.icon" size="18" />
             </UiButton>

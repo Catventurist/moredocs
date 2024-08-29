@@ -1,5 +1,5 @@
 <template>
-  <div class="items-center">
+  <div class="items-center mx-auto">
     <LayoutHeader />
     <slot />
     <LayoutFooter />

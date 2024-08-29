@@ -1,21 +1,17 @@
 <template>
-  <div class="relative pt-2 lg:pt-2 min-h-screen">
-    <div class="bg-cover w-full flex justify-center items-center">
+  <UiCard class="relative pt-2 lg:pt-2 min-h-screen">
+    <UiCardContent class="bg-cover w-full flex justify-center items-center">
       <div class="w-full p-5 bg-background/40 backdrop-filter backdrop-blur-lg">
-        <div class="w-12/12 mx-auto rounded-2xl p-5 bg-opacity-40 backdrop-filter backdrop-blur-lg">
+        <div class="mx-auto rounded-2xl p-5 bg-opacity-40 backdrop-filter backdrop-blur-lg">
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 text-center px-2 mx-auto">
             <div
-              class="p-6 mb-6 shadow transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer">
-              <NuxtLink to="/" target="_self" class="absolute opacity-0 top-0 right-0 left-0 bottom-0">
-                1
-              </NuxtLink>
+              class="p-6 mb-6 shadow dark:shadow-primary/40 duration-300 group hover:shadow-inner rounded-2xl cursor-pointer">
               <div class="relative mb-4 rounded-2xl">
-                <img
-                  class="max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105"
+                <img class="max-h-80 rounded-2xl w-full object-cover duration-300 group-hover:scale-95"
                   src="/Cateouti.png" alt="cat">
-                <div class="absolute gap-1 backdrop-blur-sm bottom-3 left-3 inline-flex items-center rounded-lg p-2">
-                  <Icon name="lucide:heart" class="bg-red" />
-                  <p class="text-md text-foreground">
+                <div class="absolute gap-1 backdrop-blur-sm text-red bottom-3 left-3 inline-flex items-center rounded-lg">
+                  <Icon name="lucide:heart" class="size-4 text-red-400" />
+                  <p class="text-sm text-red-400">
                     2
                   </p>
                 </div>
@@ -25,16 +21,17 @@
                   <p>
                     Read more
                   </p>
-                  <Icon name="lucide:arrow-right" class="animate-wiggle" />
+                  <Icon name="lucide:arrow-right" class="size-6" />
                 </NuxtLink>
               </div>
               <div class="flex justify-around items-center w-full pb-4 mb-auto">
                 <div class="flex items-center">
                   <div class="pr-3">
+
                     <img class="h-12 w-12 rounded-full object-cover duration-300 group-hover:scale-95" src="/Cateouti.png"
                       alt="cat">
                   </div>
-                  <div class="flex flex-1pl-4 justify-center">
+                  <div class="flex flex-row justify-center">
                     <p class="text-sm font-semibold ">Cat</p>
                     <div class="text-sm text-muted-foreground gap-2">
                       <Icon name="lucide:calendar-days" class="text-primary" />
@@ -61,6 +58,10 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </UiCardContent>
+  </UiCard>
 </template>
+
+<script setup lang="ts">
+const { page } = useContent()
+</script>

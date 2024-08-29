@@ -1,8 +1,9 @@
 
 <template>
-  <div class="ps-8 sm:py-12 lg:ps-12 gap-2 align-items-center justify-content-center">
+  <div class="px-8 lg:px-12 gap-2">
     <LayoutHeader />
-    <div class="w-full sm:px-2 md:px-4 lg:px-6">
+    <div class="w-full gap-2 space-y-2 sm:p-2 md:px-4 lg:p-6 w-full text-center">
+      <ArticleTopPart />
       <slot />
     </div>
     <LayoutPrevNext />

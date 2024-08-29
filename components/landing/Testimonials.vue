@@ -71,11 +71,8 @@ const reviewList: ReviewProps[] = [
         Thoughts and feedback
       </h2>
     </div>
-    <UiCarousel :opts="{
-      align: 'start',
-    }" :plugins="[Autoplay({
-  delay: 2000,
-})]" class="relative w-[80%] sm:w-[90%] lg:max-w-screen-xl mx-auto">
+    <UiCarousel :opts="{ align: 'start' }" :plugins="[Autoplay({ delay: 2000, })]"
+      class="relative w-[80%] sm:w-[90%] lg:max-w-screen-xl mx-auto">
       <UiCarouselContent>
         <UiCarouselItem v-for="review in reviewList" :key="review.name" class="md:basis-1/2 lg:basis-1/3">
           <UiCard class="bg-muted/50 dark:bg-card group/card">

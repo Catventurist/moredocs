@@ -63,11 +63,11 @@ export default defineNuxtConfig({
   },
   app: {
     pageTransition: {
-      name: 'rotate',
+      name: 'page',
       mode: 'out-in' // default
     },
     layoutTransition: {
-      name: 'page',
+      name: 'rotate',
       mode: 'out-in' // default
     }
   },
@@ -75,4 +75,12 @@ export default defineNuxtConfig({
     server: false,
     client: false
   },
+  experimental: {
+    defaults: {
+      nuxtLink: {
+        prefetch: true,
+        prefetchOn: { visibility: false, interaction: true }
+      }
+    }
+  }
 });

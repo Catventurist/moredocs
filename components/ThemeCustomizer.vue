@@ -1,29 +1,21 @@
 <template>
-  <div class="grid gap-6">
-    <div class="grid space-y-1">
-      <h1 class="text-lg font-semibold text-foreground">
-        Customize
-      </h1>
-      <p class="text-sm text-muted-foreground">
-        Pick a style and color for the docs.
-      </p>
-    </div>
+  <UiScrollArea class="overflow-auto md:h-[460px]">
     <div class="space-y-1.5">
       <UiLabel>Color</UiLabel>
       <UiSeparator />
-      <template v-for="color in allColors" :key="color" class="grid grid-cols-3 gap-2">
-        <UiButton class="justify-start gap-2" variant="outline" :class="{ 'border-2 border-primary': theme === color }"
-          @click="setTheme(color)">
-          <div class="flex size-5 items-center justify-center rounded-full"
-            :style="{ backgroundColor: backgroundColor(color) }">
+      <div class="grid grid-cols-3 gap-2 justify-center">
+        <UiButton v-for="color in allColors" :key="color" variant="outline" class="gap-2 self-center"
+          :class="{ 'text-primary gap-1 border-2 border-primary': theme === color }" @click="setTheme(color)">
+          <div class="flex size-5 items-center rounded-full" :style="{ backgroundColor: backgroundColor(color) }">
             <Icon v-if="theme === color" name="lucide:check" size="16" />
           </div>
           <p class="text-xs capitalize">{{ color }}</p>
         </UiButton>
-      </template>
+      </div>
     </div>
     <div class="space-y-1.5">
       <UiLabel>Radius</UiLabel>
+      <UiSeparator />
       <div class="grid grid-cols-5 gap-2">
         <template v-for="r in RADII" :key="r">
           <UiButton class="justify-center gap-2" variant="outline" :class="{ 'border-2 border-primary': radius === r }"
@@ -35,6 +27,7 @@
     </div>
     <div class="space-y-1.5">
       <UiLabel>Theme</UiLabel>
+      <UiSeparator />
       <div class="grid grid-cols-3 gap-2">
         <UiButton class="justify-center gap-2" variant="outline"
           :class="{ 'border-2 border-primary': colorMode.preference === 'light' }"
@@ -55,11 +48,16 @@
         </UiButton>
       </div>
     </div>
-  </div>
+    <div class="space-y-1.5">
+      <UiLabel>Layout</UiLabel>
+      <UiSeparator />
+      <CommsLayButton class="justify-center" />
+    </div>
+  </UiScrollArea>
 </template>
 
 <script setup lang="ts">
-import { themes } from '@/lib/registry/themes';
+import { themes } from '@/lib/themes';
 
 const { themeClass, theme, radius, setTheme, setRadius } = useThemes();
 

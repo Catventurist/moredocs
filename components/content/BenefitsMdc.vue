@@ -48,7 +48,7 @@ const benefitList: BenefitsProps[] = [
 
 <template>
   <div class="grid lg:grid-cols-2 place-items-center lg:gap-24">
-    <UiCard v-for="({ top, mid, bot }, index) in HeaderList" :key="top" class="group/head border-0">
+    <UiCard v-for="({ top, mid, bot }) in HeaderList" :key="top" class="group/head border-0">
       <UiCardHeader>
         <UiCardTitle v-if="top" class="text-lg text-primary mb-2 duration-300 delay-75 group-hover/head:text-foreground">
           <ContentSlot :use="$slots.top" unwrap="p" />

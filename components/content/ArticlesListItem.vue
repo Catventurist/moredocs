@@ -7,6 +7,9 @@ type Article = {
   description: string
   cover: string
   publishedAt: string
+  author: {
+    name: string
+  }
 }
 
 defineProps({
@@ -26,11 +29,11 @@ defineProps({
 </script>
 
 <template>
-  <div class="flex flex-col gap-4 group hover:bg-primary/10" v-if="article?._path && article?.title"
-    :class="{ 'md:flex-row gap-8': featured }">
-    <NuxtLink v-if="article?._path" :to="article._path">
-      <NuxtImg
-        class="h-44 aspect-video object-cover rounded-md opacity-60 duration-300 group-hover:scale-105 group-hover:opacity-90"
+  <div class="flex flex-col rounded-md gap-4 p-2 items-center group hover:bg-primary/10"
+    v-if="article?._path && article?.title" :class="{ 'md:flex-row gap-6': featured }">
+    <NuxtLink v-if="article?._path" :to="article._path" class="">
+      <img
+        class="h-44 aspect-video object-cover rounded-md opacity-60 duration-300 group-hover:scale-95 group-hover:opacity-90"
         v-if="article?.cover" :src="article.cover" alt="Cat" />
     </NuxtLink>
     <UiCard class="flex flex-col flex-1 gap-2 items-center">
@@ -41,12 +44,13 @@ defineProps({
         class="line-clamp-2 text-muted-foreground duration-300 group-hover:text-foreground">
         {{ article.description }}
       </UiCardDescription>
-      <UiCardContent v-if="page?.author.name"
-        class="flex flex-row gap-2 justify-center text-sm duration-300 group-hover:text-primary">
+      <UiCardContent class="flex flex-row gap-2 justify-center text-sm duration-300 group-hover:text-primary">
         <time v-if="article?.publishedAt">
           {{ (article.publishedAt) }}
         </time>
-        {{ page.author.name }}
+        <p v-if="page.author?.name">
+          {{ article.author.name }}
+        </p>
       </UiCardContent>
     </UiCard>
   </div>

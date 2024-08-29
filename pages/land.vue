@@ -1,6 +1,7 @@
 <template>
   <div>
-    <NuxtLayout name="default">
+    <NuxtLayout>
+      <ArticleCardList />
       <LandingBenefits />
       <LandingFeatures />
       <LandingPricing />
@@ -9,3 +10,12 @@
     </NuxtLayout>
   </div>
 </template>
+<script setup lang="ts">
+definePageMeta({
+  title: 'Landing Page',
+  description: 'Some pretty components',
+  icon: 'lucide:plane',
+  layout: 'default',
+  path: '/land'
+})
+</script>

@@ -13,6 +13,7 @@ Replaced icons
 - Personalized *app.config.ts*
 - Added some layouts
 - More animations
+- Pages: Articles, Authors, Landing
 
 [moredocs](https://github.com/catventurist/moredocs)
 
@@ -22,7 +23,7 @@ Replaced icons
 [![License][license-src]][license-href]
 
 ## Original Template: shadcn-docs-nuxt
-Beautifully designed _Nuxt Content_ Template built with _shadcn-vue_. **Customizable. Compatible. Open Source.**
+Beautifully designed _Nuxt Content_ Template built with _shadcn-vue_. *Customizable. Compatible. Open Source.*
 - Original [template](https://github.com/ZTL-UwU/shadcn-docs-nuxt)
 - [Documentation / Demo](https://shadcn-docs.nuxt.dev/)
 

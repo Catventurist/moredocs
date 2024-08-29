@@ -1,4 +1,6 @@
 <script setup lang="ts">
+
+
 interface BenefitsProps {
   icon: string;
   title: string;
@@ -59,10 +61,12 @@ const benefitList: BenefitsProps[] = [
             </h2>
           </div>
           <UiCardTitle v-if="title" class="text-foreground/80 duration-300 delay-75 group-hover/number:text-primary">
+            <ContentSlot :use="$slots.title" unwrap="p" />
             {{ title }}
           </UiCardTitle>
         </UiCardHeader>
         <UiCardContent v-if="description" class="text-muted-foreground">
+          <ContentSlot :use="$slots.description" unwrap="p" />
           {{ description }}
         </UiCardContent>
       </UiCard>

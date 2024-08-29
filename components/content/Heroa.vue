@@ -28,7 +28,7 @@ defineProps({
           </ContentSlot>
         </UiCardContent>
       </UiCard>
-      <NuxtImg v-if="image" :class="imagePosition"
+      <img v-if="image" :class="imagePosition"
         class="h-[400px] object-cover mt-2 rounded-xl -left:order-1 opacity-60 duration-300 delay-50 hover:scale-105 group-hover:opacity-100"
         :src="image" :alt="imageAlt" />
     </div>

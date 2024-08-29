@@ -15,66 +15,64 @@ interface HeaderProps {
 
 const HeaderList: HeaderProps[] = [
   {
-    top: 'Testimonials',
+    top: 'Quotes',
     mid: 'Thoughts',
-    bot: 'Feedback'
+    bot: 'Philosophy'
   }
 ]
 const reviewList: ReviewProps[] = [
   {
     image: "/Cateouti.png",
-    name: "John Doe",
-    userName: "Product Manager",
+    name: "George Orwell",
+    userName: "Author",
     comment:
-      "Wow Vue + Shadcn-Vue is awesome!. This template lets me change colors, fonts and images to match my brand identity. ",
+      "In a time of deceit telling the truth is a revolutionary act.",
     rating: 5.0,
   },
   {
     image: "/Cateouti.png",
-    name: "Sophia Collins",
-    userName: "Cybersecurity Analyst",
+    name: "Buckminister Fuller",
+    userName: "Engineer",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. ",
+      "You never change things by fighting the existing reality. To change something, build a new model that makes the existing model obsolete.",
     rating: 4.8,
-  },
-
-  {
+  }, {
     image: "/Cateouti.png",
-    name: "Adam Johnson",
-    userName: "Chief Technology Officer",
+    name: "Robert Anton Wilson",
+    userName: "Discordian",
     comment:
-      "Lorem ipsum dolor sit amet,exercitation. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "The fear of death is the beginning of slavery.",
     rating: 4.9,
   },
   {
     image: "/Cateouti.png",
-    name: "Ethan Parker",
-    userName: "Data Scientist",
+    name: "Terence McKenna",
+    userName: "Botanist",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      "The syntactical nature of reality, the real secret of magic, is that the world is made of words. And if you know the words that the world is made of, you can make of it whatever you wish.",
     rating: 5.0,
   },
   {
     image: "/Cateouti.png",
-    name: "Ava Mitchell",
-    userName: "IT Project Manager",
+    name: "Aldous Huxley",
+    userName: "Author",
     comment:
-      "Lorem ipsum dolor sit amet, tempor incididunt  aliqua. Ut enim ad minim veniam, quis nostrud incididunt consectetur adipiscing elit.",
+      "The more powerful and original a mind, the more it will incline towards the religion of solitude.",
     rating: 5.0,
   },
   {
     image: "/Cateouti.png",
-    name: "Isabella Reed",
-    userName: "DevOps Engineer",
+    name: "Jiddu Krishnamurti",
+    userName: "Thinker",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "It is no measure of health to be well adjusted to a profoundly sick society.",
     rating: 4.9,
   },
 ];
 </script>
 
 <template>
-  <UiCard class="grid grid-col justify-items-center group/head border-0">
+  <UiCard class="grid grid-col justify-items-center group/head border-0 lg:my-14">
     <UiCardHeader v-for="({ top, mid }) in HeaderList" :key="top" class="text-center">
       <UiCardTitle v-if="top" class="text-lg text-primary mb-2 duration-300 delay-75 group-hover/head:text-foreground">
         <ContentSlot :use="$slots.top" unwrap="p" />

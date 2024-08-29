@@ -1,5 +1,5 @@
 <template>
-  <div lang="en">
+  <div>
     <NuxtLayout>
       <ContentRenderer :key="page._id" :value="page" class="docs-content prose" />
     </NuxtLayout>

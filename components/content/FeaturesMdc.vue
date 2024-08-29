@@ -58,7 +58,7 @@ const featureList: FeaturesProps[] = [
 </script>
 
 <template>
-  <div class="grid lg:grid-cols-3 place-items-center lg:gap-24">
+  <div class="grid lg:grid-cols-3 place-items-center lg:my-14">
     <UiCard v-for="({ top, mid, bot }) in HeaderList" :key="top" class=" text-end group/head border-0">
       <UiCardHeader>
         <UiCardTitle v-if="top" class="text-lg text-primary mb-2 duration-300 delay-75 group-hover/head:text-foreground">

@@ -51,7 +51,7 @@ const FAQList: FAQProps[] = [
 </script>
 
 <template>
-  <div class="grid lg:grid-cols-3 lg:gap-24 items-center group/head">
+  <div class="grid lg:grid-cols-3 items-center group/head lg:my-14">
     <UiCard v-for="({ top, mid }) in HeaderList" :key="top" class="border-0">
       <UiCardHeader class="text-center">
         <UiCardTitle v-if="top"
@@ -89,7 +89,7 @@ const FAQList: FAQProps[] = [
         </h2>
         <NuxtLink to="/">
           <UiButton variant="outline" class="flex flex-row items-center gap-2">
-            <Icon name="lucide:chat-bubble" class="size-4" />
+            <Icon name="lucide:message-circle" class="size-4" />
             Contact
           </UiButton>
         </NuxtLink>

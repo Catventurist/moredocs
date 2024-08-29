@@ -36,13 +36,13 @@ export default defineAppConfig({
           icon: 'lucide:book-open',
           title: 'Articles',
           to: '/articles/recent-articles',
-          description: 'Discover the content',
+          description: 'Scroll through the posts made by users',
           target: '_self',
         }, {
           icon: 'lucide:plane-landing',
           title: 'Landing',
           to: '/landing',
-          description: 'Page with info',
+          description: 'Elements with various project information',
           target: '_self',
         }],
       }, {
@@ -58,7 +58,7 @@ export default defineAppConfig({
           icon: 'vscode-icons:file-type-vue',
           title: 'shadcn-vue',
           to: 'https://www.shadcn-vue.com/',
-          description: 'Vue port of shadcn-ui',
+          description: 'Vue port of shadcn-ui components',
           target: '_blank',
         }, {
           icon: 'vscode-icons:file-type-nuxt',
